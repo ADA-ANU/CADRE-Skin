@@ -97,20 +97,20 @@ div.skincilogonlogo a img {
     background-color: rgba(5, 0, 0, .03);
     padding: 10px 0;
     margin-top: 1em;
-  }
-  
-  .footer a:link,
-  .footer a:visited {
+}
+
+.footer a:link,
+.footer a:visited {
     color: rgba(22, 119, 255, 0.75);
     outline: none;
     text-decoration: underline
-  }
-  
-  .footer a:hover,
-  .footer a:active {
+}
+
+.footer a:hover,
+.footer a:active {
     color: rgba(22, 119, 255, 0.40);
     text-decoration: none
-  }
+}
 
 #heading-oidcconsent {
     display: none;
