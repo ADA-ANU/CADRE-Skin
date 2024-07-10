@@ -3,6 +3,12 @@ body {
     color: rgba(26, 26, 26, .75);
     background: rgb(237,237,237);
     background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(250,250,250,1) 50%, rgba(237,237,237,1) 100%);
+    margin-bottom: 105px;
+    position: relative;
+}
+
+.container-fluid {
+    min-height:80vh;
 }
 
 a {
@@ -51,7 +57,7 @@ div.logoheader {
     background: 0 0;
     height: 70px;
     width: 100%;
-    min-width: 600px
+    min-width: 0;
 }
 
 div.logoheader h1 {
@@ -59,8 +65,8 @@ div.logoheader h1 {
     background-size: 100%;
     margin-top: 8px;
     margin-left: 8px;
-    width: 200px;
-    height: 70px;
+    width: 340px;
+    height: 120px;
     float: left
 }
 
@@ -71,18 +77,26 @@ div.skincilogonlogo {
     display: inline;
     margin-top: 12px;
     margin-right: 8px;
-    height: 205px; 
-    width: 195px;
+    height: 150px; 
+    width: 143px;
 }
 
 div.skincilogonlogo a img {
     display: none
 }
 
+.form-check label {
+    margin-left: 1em;
+}
+
 .footer {
+    position: absolute;
+    bottom: -105px;
+    height: auto;
     border: 1px solid #c0c2c5;
     background-color: rgba(5, 0, 0, .03);
-    height: auto;
+    padding: 10px 0;
+    margin-top: 1em;
 }
 
 .footer a:link,
@@ -114,7 +128,6 @@ div.skincilogonlogo a img {
     line-height: initial
 }
 
-
 .dropdown.bootstrap-select {
     width: 90% !important;
     text-align: center;
@@ -133,4 +146,33 @@ div.skincilogonlogo a img {
 
 .bootstrap-select .dropdown-toggle .filter-option {
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    div.logoheader h1 {
+        margin-top: 8px;
+        margin-left: 8px;
+        width: 180px;
+        height: 70px;
+    }
+
+    div.skincilogonlogo {
+        width: 80px;
+        height: 70px;
+    }
+
+    .px-5 {
+        padding: 1em !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        margin-bottom: 140px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: -140px;
+    }
 }

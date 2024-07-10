@@ -1,4 +1,4 @@
-# Coordinated Access for Researchers, Data and Environments (CADRE) Skin
+# Coordinated Access for Data, Researchers and Environments (CADRE) Skin
 
 _Coordinated Access for Data, Research and Environments (CADRE) – A Five Safes Implementation Framework for Sensitive Data in Humanities, Arts, and Social Sciences in Australia._
 
