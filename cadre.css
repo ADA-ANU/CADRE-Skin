@@ -5,10 +5,7 @@ body {
     background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(250,250,250,1) 50%, rgba(237,237,237,1) 100%);
     margin-bottom: 105px;
     position: relative;
-}
-
-.container-fluid {
-    min-height:80vh;
+    min-height: calc(100svh - 105px);
 }
 
 a {
@@ -96,7 +93,6 @@ div.skincilogonlogo a img {
     border: 1px solid #c0c2c5;
     background-color: rgba(5, 0, 0, .03);
     padding: 10px 0;
-    margin-top: 1em;
 }
 
 .footer a:link,
@@ -163,16 +159,5 @@ div.skincilogonlogo a img {
 
     .px-5 {
         padding: 1em !important;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    body {
-        margin-bottom: 140px;
-    }
-
-    .footer {
-        position: absolute;
-        bottom: -140px;
     }
 }
