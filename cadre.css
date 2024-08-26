@@ -12,6 +12,15 @@ a {
     color: #1677ff;
 }
 
+body>div:nth-child(3) { 
+    margin: 1rem calc(8px + 25%) 0 calc(8px + 25%);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
 a:visited {
     color: rgba(22, 119, 255, .8);
 }
@@ -144,6 +153,19 @@ div.skincilogonlogo a img {
     text-align: center;
 }
 
+@media screen and (max-width: 991px) {
+    body>div:nth-child(3) { 
+        margin: 1rem calc(10px + 16.666667%) 0 calc(10px + 16.666667%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body>div:nth-child(3) { 
+        margin: 1rem calc(12px + 8.333333%) 0 calc(12px + 8.333333%);
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     div.logoheader h1 {
         margin-top: 8px;
@@ -159,5 +181,11 @@ div.skincilogonlogo a img {
 
     .px-5 {
         padding: 1em !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    body>div:nth-child(3) { 
+        margin: 1rem 15px 0 15px;
     }
 }
