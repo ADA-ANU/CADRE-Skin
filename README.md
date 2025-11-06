@@ -17,6 +17,7 @@ A copy of the CADRE skin's styling is saved within each CiLogon instance which i
 > 1. Skin associated with the `clientid` query parameter
 > 2. Assignment with the `skin` query parameter
 > 3. Cached page CSS
+> 4. Default CiLogon CSS
 
 As can be seen from the screenshot below, when inspecting the HTML of the page we can see the `<style>` tag where the CADRE skin is being inserted.
 
