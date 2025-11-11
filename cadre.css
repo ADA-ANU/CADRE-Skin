@@ -1,24 +1,39 @@
 body {
     font-family: Futura, Trebuchet MS, Arial, sans-serif;
     color: rgba(26, 26, 26, .75);
-    background: rgb(237,237,237);
+    background:#ededed;
     background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(250,250,250,1) 50%, rgba(237,237,237,1) 100%);
-    margin-bottom: 105px;
+    margin-bottom: 116.883px;
     position: relative;
-    min-height: calc(100svh - 105px);
+    min-height: calc(100svh - 116.883px);
 }
 
 a {
     color: #1677ff;
 }
 
-body>div:nth-child(3) { 
+body>div:nth-child(3) {
     margin: 1rem calc(8px + 25%) 0 calc(8px + 25%);
-    background: rgb(255, 255, 255);
+    background: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
     text-align: center;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0;
+}
+
+body>div:nth-child(4){
+    margin: 1rem calc(8px + 25%) 0 calc(8px + 25%);
+    border-radius: .25rem;
+    padding: 1em;
+}
+
+body>div:nth-child(4)>p {
+    font-size: .9em;
+    margin-bottom: 2rem;
+}
+
+body>div:nth-child(4)>img {
+    height: 70px;
 }
 
 a:visited {
@@ -31,9 +46,9 @@ a:active {
 }
 
 .btn.btn-primary {
-	color: #fff;
-	background: #1677ff;
-	box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+    color: #fff;
+    background: #1677ff;
+    box-shadow: 0 2px 0 rgba(5, 145, 255, .1);
     transition: .3s background-color linear, .3s color linear;
     font-family: Futura, Trebuchet MS, Arial, sans-serif;
     font-weight: 700;
@@ -82,7 +97,7 @@ div.skincilogonlogo {
     display: inline;
     margin-top: 12px;
     margin-right: 8px;
-    height: 102px; 
+    height: 102px;
     width: 106px;
 }
 
@@ -94,9 +109,9 @@ div.skincilogonlogo a img {
     margin-left: 1em;
 }
 
-.footer {
+.footer{
     position: absolute;
-    bottom: -105px;
+    bottom: -116.883px;
     height: auto;
     border: 1px solid #c0c2c5;
     background-color: rgba(5, 0, 0, .03);
@@ -105,15 +120,15 @@ div.skincilogonlogo a img {
 
 .footer a:link,
 .footer a:visited {
-    color: rgba(22, 119, 255, 0.75);
+    color: rgba(22, 119, 255, .75);
     outline: none;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .footer a:hover,
 .footer a:active {
-    color: rgba(22, 119, 255, 0.40);
-    text-decoration: none
+    color: rgba(22, 119, 255, .4);
+    text-decoration: none;
 }
 
 #heading-oidcconsent {
@@ -122,14 +137,14 @@ div.skincilogonlogo a img {
 
 #heading-selectanidp {
     text-indent: -9999px;
-    line-height: 0
+    line-height: 0;
 }
 
 #heading-selectanidp:after {
     content: "Choose Your Identity Provider";
     text-indent: 0;
     display: block;
-    line-height: initial
+    line-height: initial;
 }
 
 .dropdown.bootstrap-select {
@@ -138,14 +153,14 @@ div.skincilogonlogo a img {
 }
 
 .dropdown-menu {
-    width: 90%
+    width: 90%;
 }
 
 .dropdown-toggle {
     background-color: transparent;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-    padding: 13px 12px
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    padding: 13px 12px;
 }
 
 .bootstrap-select .dropdown-toggle .filter-option {
@@ -153,17 +168,24 @@ div.skincilogonlogo a img {
 }
 
 @media screen and (max-width: 991px) {
-    body>div:nth-child(3) { 
+    body>div:nth-child(3) {
+        margin: 1rem calc(10px + 16.666667%) 0 calc(10px + 16.666667%);
+    }
+    
+    body>div:nth-child(4) {
         margin: 1rem calc(10px + 16.666667%) 0 calc(10px + 16.666667%);
     }
 }
 
 @media screen and (max-width: 767px) {
-    body>div:nth-child(3) { 
+    body>div:nth-child(3) {
+        margin: 1rem calc(12px + 8.333333%) 0 calc(12px + 8.333333%);
+    }
+
+    body>div:nth-child(4) {
         margin: 1rem calc(12px + 8.333333%) 0 calc(12px + 8.333333%);
     }
 }
-
 
 @media screen and (max-width: 600px) {
     div.logoheader h1 {
@@ -172,19 +194,34 @@ div.skincilogonlogo a img {
         width: 180px;
         height: 70px;
     }
-
+    
     div.skincilogonlogo {
         width: 80px;
         height: 70px;
     }
-
+    
     .px-5 {
         padding: 1em !important;
     }
 }
 
 @media screen and (max-width: 575px) {
-    body>div:nth-child(3) { 
-        margin: 1rem 15px 0 15px;
+    body>div:nth-child(3) {
+        margin: 1rem 15px 0;
     }
+    
+    body>div:nth-child(4) {
+        margin: 1rem 15px;
+    }
+}
+
+.border-transparent {
+    border: transparent;
+    background: 0 0;
+}
+
+.card-logo {
+    float: inline-start;
+    padding-right: 1em;
+    width: 150px;
 }

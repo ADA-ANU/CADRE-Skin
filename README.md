@@ -1,52 +1,46 @@
 # Coordinated Access for Data, Researchers and Environments (CADRE) Skin
 
-_Coordinated Access for Data, Research and Environments (CADRE) – A Five Safes Implementation Framework for Sensitive Data in Humanities, Arts, and Social Sciences in Australia._
+This repository contains the CSS file used to style (skin) the CADRE authentication page at [https://cilogon.aaf.edu.au/authorize](https://cilogon.aaf.edu.au/authorize) with CADRE branding.
 
-## ⚙️ Usage
+> [!NOTE]
+> The terms 'skin' (the stylesheet) and 'skinning' (applying the style) are used by Australian Access Federation (AAF) and CiLogon.
 
-This repository stores the `CSS` file which is applied to CADRE's authentication page for distribution between ADA, AAF and CiLogon.
+## Applying the Skin
 
-## ℹ️ Background
+A copy of this CSS is saved within each CiLogon instance (Dev, Test, Prod). The skin's styling is dynamically inserted into the `<head>` element of the login page when a user is directed there.
 
-### The Response
-The CADRE project is developing the integrated infrastructure required to implement the Five Safes Framework in Australian research institutions and collaborating government and private sector agencies. 
+> [!TIP]
+> CiLogon determines which skin to apply using a combination of query parameters, with the highest priority being:
+> 
+> 1. `clientid` query parameter: If the `clientid` is associated with CADRE's CO (Collaborative Organization), the skin is applied automatically.
+> 2. `skin` query parameter: If a skin isn't associated with the `clientid`, the `skin` parameter can be used. For CADRE, this is `?skin=cadre`.
+> 3. Default CiLogon CSS
+>
+> _Example: [https://cilogon.aaf.edu.au?skin=cadre](https://cilogon.aaf.edu.au?skin=cadre)_
 
-This framework is being adapted for use by the Office of the National Data Commissioner, which is developing new legislative and data governance frameworks designed to reduce barriers to access to data held by governments while maintaining public trust that sensitive data is only released and used appropriately. 
 
-A central and critical element of this will be the Five Safes Framework, which will provide a basis for the release of government data. 
+As can be seen from the screenshot below, when inspecting the HTML of the page we can see the `<style>` tag where the CADRE skin is being inserted.
 
-The project involves the following elements:
+![Inspecting the Inserted Skin Styling](docs-images/viewing-skin-styling.png)
 
-- __Shared Conceptual Framework__ — A shared conceptual framework for efficiently and reliably connecting the elements of the 5 Safes (People, Projects, Data, Settings and Outputs), with agreed identifiers and template accreditation protocols for each element.
-- __Information Exchange Protocols__ — Protocols for exchanging identifier and accreditation information between data users, providers and trusted access facilities.
-- __Access Management Platform__ — An integrated access management platform for data access requests.
-- __Pilot Platform Integrations__ — Pilot integrations of the CADRE platform in four secure access settings: the ERICA secure access environment; the Cloudstor and SWAN systems; the Data CO-OPS environment and the Australian Urban Research Infrastructure Network (AURIN).
-- __Training and Development__ — A training and development program for CADRE users to raise awareness of and capacity to use the CADRE platform for future research.
+## Updating the Skin
 
-### Who Will Benefit
+Since a copy of the skin is saved on CiLogon instances, updates require notifying a member of the AAF or CiLogon team.
 
-The humanities and social sciences (HASS) research community, research organisations, infrastructure providers and governments will benefit from the project core features:
+- After changes are merged into this repository, the AAF/CiLogon team downloads the latest CSS to update their Dev, Test, and Production instances.
+- Changes are typically tested on Dev and Test environments first before going to Production.
 
-- __Shared Understanding__ — An agreed method for implementing the Five Safes Framework, so that the requirements for accessing Australia’s sensitive data are clear.
-- __Research Transformation__ — An infrastructure that will allow researchers to request the data that they need to answer important questions, so that Australia can truly realise the benefits of increased access to government data.
+## Developing & Testing Changes
 
-### The Partners
+The simplest way to test is to copy your updated CSS content and paste it directly into the `<style>` tag within the `<head>` element of the live page using your browser's developer tools.
 
-Our partners are:
+For more extensive changes, consider hosting the CSS file locally and linking to it externally to reflect changes faster.
 
-- Australian Data Archive
-- Australian Access Federation
-- AURIN
-- AARNet
-- Australian Institute of Health and Welfare 
-- Australian Institute of Family Studies 
-- Swinburne University of Technology
-- Australian National University
-- The University of Queensland
-- University of New South Wales
-- The University of Melbourne
-- Research Graph Foundation.
+Always test your styling changes on the following CiLogon pages (substituting dev for test or prod as needed):
 
-### Target Outcomes
+- https://dev.cilogon.aaf.edu.au/?skin=cadre
+- https://dev.cilogon.aaf.edu.au/me/?skin=cadre
+- https://dev.cilogon.aaf.edu.au/device/?skin=cadre
+- https://dev.cilogon.aaf.edu.au/authorize?scope=org.cilogon.userinfo+openid+profile+email&response_type=code&redirect_uri=https%3A%2F%2Fdemo-dev.cilogon.aaf.edu.au%2Fcilogon2%2Fready&prompt=login&client_id=cilogon%3Adev.cilogon.aaf.edu.au%2Fdemo&skin=cadre
 
-The CADRE platform will enable data owners and users to address the core concerns around governance, creation, management and sharing of sensitive data for research. As a result, Australia’s research sector will have improved access to the data needed to develop solutions to a wide range of public problems.
+Once you confirm the styling is correct, update the repository and notify the CiLogon/AAF team.
